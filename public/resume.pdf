@@ -1,0 +1,155 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Contents 4 0 R /Resources << /Font << /F1 5 0 R /F2 6 0 R >> >> >>
+endobj
+4 0 obj
+<< /Length 6283 >>
+stream
+BT
+/F2 16 Tf
+1 0 0 1 195 800 Tm
+(DURGASHANKAR PATRA) Tj
+/F2 9 Tf
+1 0 0 1 80 785 Tm
+(Senior Java Software Engineer | Microservices, Distributed Systems & AI-Driven Engineering) Tj
+/F1 8.5 Tf
+1 0 0 1 125 770 Tm
+(durgashankarpatra380@gmail.com   |   linkedin.com/in/durgashankarpatra-java-developer) Tj
+/F2 9 Tf
+1 0 0 1 230 757 Tm
+(Indore, India \(Open to Relocate\)) Tj
+/F2 10 Tf
+1 0 0 1 40 735 Tm
+(PROFESSIONAL SUMMARY) Tj
+/F1 8 Tf
+1 0 0 1 40 721 Tm
+(Product-focused Senior Java Software Engineer with 4.5+ years of experience designing and building enterprise distributed systems, custom) Tj
+1 0 0 1 40 710 Tm
+(connectors, and scalable microservices from scratch using Java 17/21, Spring Boot 3.x, Apache Kafka, and AWS. Proven track record of) Tj
+1 0 0 1 40 699 Tm
+(architecting event-driven backends handling 10,000+ RPS with 99.99% system availability and reducing p99 API latency by 40%. Power user of) Tj
+1 0 0 1 40 688 Tm
+(AI coding assistants \(Cursor IDE, Claude, GitHub Copilot\) to accelerate SDLC delivery while establishing rigorous code review and validation) Tj
+1 0 0 1 40 677 Tm
+(gates for enterprise security \(OWASP\), performance, and Clean Code standards.) Tj
+/F2 10 Tf
+1 0 0 1 40 657 Tm
+(TECHNICAL SKILLS) Tj
+/F1 7.8 Tf
+1 0 0 1 40 644 Tm
+(Languages & Core: Java 17 / 21, SQL, Multithreading, Concurrency, Virtual Threads, Data Structures, Design Patterns, System Design) Tj
+1 0 0 1 40 632 Tm
+(Backend & Microservices: Spring Boot 3.x, Microservices Architecture, Spring Cloud \(Eureka, OpenFeign, Gateway\), Spring Data JPA, Hibernate, Resilience4j, REST APIs) Tj
+1 0 0 1 40 620 Tm
+(Distributed Systems: Apache Kafka \(Event-Driven Architecture, Pub/Sub, DLQ, Idempotent Consumers\), Event-Sourcing & Saga Pattern) Tj
+1 0 0 1 40 608 Tm
+(Databases & Caching: PostgreSQL, MySQL, MongoDB, Redis \(Distributed Caching, Rate Limiting & Session Store\), Query Optimization & Indexing) Tj
+1 0 0 1 40 596 Tm
+(Security & Observability: Keycloak \(IAM\), OAuth 2.0, JWT, Spring Security, Prometheus, Grafana, OpenTelemetry, SonarQube) Tj
+1 0 0 1 40 584 Tm
+(Cloud & DevOps: AWS \(EC2, S3, RDS, CloudWatch, IAM\), Docker, Kubernetes \(K8s Deployments & Services\), Jenkins CI/CD, Maven) Tj
+1 0 0 1 40 572 Tm
+(AI Coding & Testing: Cursor IDE, GitHub Copilot, Claude 3.5 Sonnet \(AI-Assisted Dev & Code Review\), JUnit 5, Mockito, TDD, Postman, Git, JIRA) Tj
+/F2 10 Tf
+1 0 0 1 40 552 Tm
+(PROFESSIONAL EXPERIENCE) Tj
+/F2 8.5 Tf
+1 0 0 1 40 539 Tm
+(Senior Java Software Engineer -- Advantal Technologies, Indore) Tj
+1 0 0 1 480 539 Tm
+(May 2022 - Present) Tj
+/F1 8 Tf
+1 0 0 1 48 527 Tm
+(- Architected and built scalable microservices and reusable enterprise connectors from scratch using Java 17 and Spring Boot, supporting) Tj
+1 0 0 1 56 516 Tm
+(  peak production loads of 8,000+ RPS across AWS with 99.99% uptime.) Tj
+1 0 0 1 48 504 Tm
+(- Implemented multi-tier Redis caching and optimized complex SQL query plans/indexing, cutting database load by 45% and dropping p99 API) Tj
+1 0 0 1 56 493 Tm
+(  response times from 420ms to 75ms.) Tj
+1 0 0 1 48 481 Tm
+(- Designed highly resilient Event-Driven Architecture with Apache Kafka handling 2M+ messages daily with idempotent consumers and dead-letter) Tj
+1 0 0 1 56 470 Tm
+(  queues \(DLQ\), ensuring zero data loss.) Tj
+1 0 0 1 48 458 Tm
+(- Led end-to-end monolithic decomposition into microservices and implemented fault tolerance using Resilience4j Circuit Breakers and rate limiters.) Tj
+1 0 0 1 48 446 Tm
+(- Hardened API security with Keycloak \(OAuth 2.0/JWT\), enforced OWASP compliance, and set up SonarQube quality gates to maintain zero critical vulns.) Tj
+1 0 0 1 48 434 Tm
+(- Pioneered adoption of AI coding tools \(Cursor, Claude, GitHub Copilot\) across backend workflows; formulated prompt guidelines for automated) Tj
+1 0 0 1 56 423 Tm
+(  JUnit 5/Mockito test generation and strictly validated AI output for security, memory leaks, and concurrency bugs.) Tj
+/F2 8.5 Tf
+1 0 0 1 40 405 Tm
+(Java Developer -- GluedIn \(formerly Plus Saw India Pvt. Ltd.\)) Tj
+1 0 0 1 445 405 Tm
+(November 2021 - May 2022) Tj
+/F1 8 Tf
+1 0 0 1 48 393 Tm
+(- Developed high-throughput, low-latency RESTful APIs and core business services for a high-traffic social media streaming platform using Java,) Tj
+1 0 0 1 56 382 Tm
+(  Spring Boot, and PostgreSQL.) Tj
+1 0 0 1 48 370 Tm
+(- Built automated CI/CD deployment pipelines using Docker and Jenkins on AWS EC2, improving deployment cadence by 40%.) Tj
+1 0 0 1 48 358 Tm
+(- Integrated Apache Kafka for real-time asynchronous user notifications and feed aggregation; utilized AWS S3 for scalable multimedia ingestion.) Tj
+1 0 0 1 48 346 Tm
+(- Conducted performance profiling and load testing using JMeter and Postman, identifying bottlenecks and improving API throughput by 25%.) Tj
+/F2 10 Tf
+1 0 0 1 40 326 Tm
+(KEY PROJECTS & SOLUTIONS BUILT FROM SCRATCH) Tj
+/F2 8 Tf
+1 0 0 1 40 313 Tm
+(KreditLo - Digital Micro-Credit & Loan Processing Engine   |   Tech: Java 17, Spring Boot, Kafka, Redis, PostgreSQL, AWS) Tj
+/F1 7.8 Tf
+1 0 0 1 48 301 Tm
+(- Engineered an end-to-end loan processing engine from scratch handling high-precision interest calculations, automated KYC workflows, and repayment schedule.) Tj
+1 0 0 1 48 290 Tm
+(- Built custom payment gateway connectors and an automated credit scoring rule engine, reducing manual loan verification turnaround time by 45%.) Tj
+/F2 8 Tf
+1 0 0 1 40 271 Tm
+(Marks and Spencer India - High-Throughput Inventory Sync Engine   |   Tech: Java 17, AWS IoT, REST APIs, SAP ERP Integration) Tj
+/F1 7.8 Tf
+1 0 0 1 48 259 Tm
+(- Architected real-time ingestion pipelines syncing RFID retail stock data with central SAP ERP systems, processing 10,000+ items/minute with sub-second sync.) Tj
+/F2 8 Tf
+1 0 0 1 40 240 Tm
+(TACACS & MCMM LMS - Centralized IAM & Secure Training Architecture   |   Tech: Java, Spring Security, Keycloak, 2FA, Docker, MySQL) Tj
+/F1 7.8 Tf
+1 0 0 1 48 228 Tm
+(- Developed a centralized authentication and authorization gateway supporting 2FA, comprehensive audit logs, and granular role-based access controls.) Tj
+/F2 10 Tf
+1 0 0 1 40 206 Tm
+(EDUCATION) Tj
+/F1 8 Tf
+1 0 0 1 40 192 Tm
+(Bachelor of Technology \(B.Tech\) - Computer Science & Engineering | Biju Patnaik University of Technology \(BPUT\), Odisha   \(2016 - 2020\)) Tj
+ET
+endstream
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+6 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+xref
+0 7
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000251 00000 n 
+0000006585 00000 n 
+0000006655 00000 n 
+trailer
+<< /Size 7 /Root 1 0 R >>
+startxref
+6730
+%%EOF

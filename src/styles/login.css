@@ -1,0 +1,251 @@
+/* ========================================================
+   VISITOR & RECRUITER PASS STYLING
+   ======================================================== */
+
+.login-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
+  position: relative;
+  overflow: hidden;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  padding: 40px 16px;
+}
+
+/* Background animated gradient blobs */
+.login-background::before,
+.login-background::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(120px);
+  opacity: 0.55;
+  pointer-events: none;
+}
+
+.login-background::before {
+  width: 400px;
+  height: 400px;
+  background: linear-gradient(135deg, #4f46e5, #6366f1);
+  top: -100px;
+  left: -100px;
+  animation: floatOrb 18s infinite alternate;
+}
+
+.login-background::after {
+  width: 480px;
+  height: 480px;
+  background: radial-gradient(circle, #f59e0b, #ec4899);
+  bottom: -140px;
+  right: -140px;
+  animation: floatOrb 22s infinite alternate-reverse;
+}
+
+@keyframes floatOrb {
+  0% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(40px, 30px) scale(1.1); }
+  100% { transform: translate(-30px, -20px) scale(1); }
+}
+
+/* Card */
+.visitor-pass-card {
+  position: relative;
+  background: rgba(30, 41, 59, 0.75);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  padding: 42px 36px;
+  border-radius: 24px;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.45);
+  max-width: 480px;
+  width: 100%;
+  z-index: 10;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  animation: cardSlideUp 0.6s ease-out;
+}
+
+@keyframes cardSlideUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.pass-icon-badge {
+  width: 58px;
+  height: 58px;
+  margin: 0 auto 16px;
+  background: linear-gradient(135deg, #4f46e5, #818cf8);
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-size: 1.8rem;
+  box-shadow: 0 8px 25px rgba(99, 102, 241, 0.4);
+}
+
+.login-title {
+  font-size: 1.85rem;
+  color: #ffffff;
+  margin: 0 0 8px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+}
+
+.login-subtitle {
+  font-size: 0.94rem;
+  color: #cbd5e1;
+  margin: 0 0 24px;
+  line-height: 1.55;
+}
+
+/* Role Selector */
+.role-selector-block {
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.input-field-label {
+  display: flex;
+  align-items: center;
+  font-size: 0.86rem;
+  font-weight: 650;
+  color: #e2e8f0;
+  margin-bottom: 7px;
+}
+
+.role-pills-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.role-pill {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #cbd5e1;
+  font-size: 0.82rem;
+  font-weight: 600;
+  padding: 6px 14px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.role-pill:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: #818cf8;
+  color: #ffffff;
+}
+
+.role-pill.active {
+  background: #4f46e5;
+  border-color: #818cf8;
+  color: #ffffff;
+  box-shadow: 0 4px 12px rgba(79, 70, 229, 0.4);
+}
+
+/* Inputs */
+.visitor-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  text-align: left;
+}
+
+.pass-input-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.pass-input {
+  width: 100%;
+  padding: 12px 16px;
+  background: rgba(15, 23, 42, 0.65);
+  border: 1.5px solid rgba(255, 255, 255, 0.18);
+  border-radius: 12px;
+  color: #ffffff;
+  font-size: 0.95rem;
+  font-family: inherit;
+  outline: none;
+  transition: all 0.25s ease;
+  box-sizing: border-box;
+}
+
+.pass-input::placeholder {
+  color: #64748b;
+}
+
+.pass-input:focus {
+  border-color: #818cf8;
+  background: rgba(15, 23, 42, 0.85);
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.25);
+}
+
+.pass-submit-btn {
+  width: 100%;
+  padding: 13px 20px;
+  font-size: 1rem;
+  font-weight: 750;
+  margin-top: 6px;
+  border-radius: 12px;
+}
+
+/* Divider */
+.divider-row {
+  display: flex;
+  align-items: center;
+  margin: 18px 0;
+  color: #64748b;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.divider-row::before,
+.divider-row::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.divider-row span {
+  padding: 0 12px;
+}
+
+/* Quick Guest Button */
+.btn-quick-guest {
+  width: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1.5px dashed rgba(255, 255, 255, 0.28);
+  color: #f1f5f9;
+  padding: 11px 18px;
+  border-radius: 12px;
+  font-size: 0.92rem;
+  font-weight: 650;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.btn-quick-guest:hover {
+  background: rgba(255, 255, 255, 0.16);
+  border-color: #facc15;
+  color: #facc15;
+  transform: translateY(-2px);
+}
+
+/* Privacy Note */
+.privacy-note {
+  margin: 20px 0 0;
+  font-size: 0.8rem;
+  color: #94a3b8;
+  line-height: 1.5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

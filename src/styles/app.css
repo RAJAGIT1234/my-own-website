@@ -1,0 +1,47 @@
+/* Full height for page */
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+/* Flex layout for entire app */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* full viewport height */
+}
+
+.main-content {
+  flex: 1 0 auto; /* allows content to grow */
+  padding-bottom: 80px; /* space for footer */
+  padding-top: 80px;   /* ⬅️ add this (same as navbar height) */
+}
+
+
+
+/* Footer styling */
+.footer {
+  flex-shrink: 0;
+  background: #f1f1f1;
+  text-align: center;
+  padding: 20px 0;
+  color: #333;
+}
+
+/* Navbar styling */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;          /* adjust as needed */
+  background: #fff;      /* keep navbar visible */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  z-index: 1000;         /* ensures it stays above content */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* optional */
+}

@@ -1,0 +1,206 @@
+/* ========================================================
+   PROJECTS PAGE STYLING - MODERN SENIOR JAVA ENGINEER
+   ======================================================== */
+
+.projects-section {
+  padding: 50px 20px 80px;
+  background: linear-gradient(135deg, #f8fafc 0%, #eef2ff 100%);
+  min-height: 100vh;
+  max-width: 1150px;
+  margin: 0 auto;
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+  color: #111827;
+}
+
+.projects-intro-block {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.projects-title {
+  font-size: 2.6rem;
+  margin-bottom: 12px;
+  background: linear-gradient(90deg, #1e1b4b, #4338ca, #6366f1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+}
+
+.projects-subtitle-text {
+  font-size: 1.1rem;
+  color: #64748b;
+  max-width: 750px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Grid */
+.projects-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+/* Card */
+.project-card {
+  background: #ffffff;
+  padding: 32px 30px;
+  border-radius: 20px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.project-card::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 6px;
+  height: 100%;
+  background: linear-gradient(180deg, #4f46e5, #06b6d4);
+}
+
+.project-card:hover {
+  box-shadow: 0 20px 45px rgba(79, 70, 229, 0.12);
+  border-color: #c7d2fe;
+}
+
+/* Top badges */
+.card-top-badge {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.badge-scratch {
+  display: inline-block;
+  background: rgba(79, 70, 229, 0.1);
+  color: #4f46e5;
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(79, 70, 229, 0.25);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.badge-impact {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #64748b;
+  background: #f1f5f9;
+  padding: 4px 12px;
+  border-radius: 999px;
+}
+
+/* Card Header */
+.card-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 18px;
+}
+
+.card-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #eef2ff, #e0e7ff);
+  color: #4f46e5;
+  font-size: 1.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.project-card h2 {
+  font-size: 1.35rem;
+  margin: 0 0 4px;
+  color: #0f172a;
+  font-weight: 750;
+  letter-spacing: -0.3px;
+}
+
+.card-subtitle {
+  font-size: 0.95rem;
+  color: #64748b;
+  margin: 0;
+  font-weight: 500;
+}
+
+/* Tech Tags */
+.project-tech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.tech-tag {
+  background: #f8fafc;
+  border: 1px solid #cbd5e1;
+  color: #1e293b;
+  padding: 4px 12px;
+  border-radius: 6px;
+  font-size: 0.82rem;
+  font-weight: 600;
+}
+
+/* Highlights */
+.card-highlights {
+  margin-bottom: 22px;
+}
+
+.card-highlights h4 {
+  font-size: 0.95rem;
+  color: #334155;
+  margin: 0 0 10px;
+  font-weight: 700;
+}
+
+.card-highlights ul {
+  padding-left: 20px;
+  margin: 0;
+}
+
+.card-highlights li {
+  margin-bottom: 10px;
+  font-size: 0.96rem;
+  line-height: 1.65;
+  color: #475569;
+}
+
+/* Metrics row */
+.card-metrics-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding-top: 16px;
+  border-top: 1px dashed #e2e8f0;
+}
+
+.card-metric-pill {
+  display: inline-flex;
+  align-items: center;
+  background: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  color: #166534;
+  padding: 6px 14px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .projects-section { padding: 40px 15px; }
+  .projects-title { font-size: 2rem; }
+  .project-card { padding: 24px 18px; }
+}

@@ -1,0 +1,37 @@
+.manager-container {
+  padding: 40px;
+  background: #f9fafb;
+  min-height: 100vh;
+}
+
+.manager-container h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.manager-container p {
+  color: #6b7280;
+  margin-bottom: 20px;
+}
+
+.manager-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.manager-table th,
+.manager-table td {
+  padding: 12px 15px;
+  border: 1px solid #e5e7eb;
+  text-align: left;
+}
+
+.manager-table th {
+  background: #4f46e5;
+  color: white;
+  border: none;
+}
+
+.manager-table tr:nth-child(even) {
+  background: #f3f4f6;
+}
