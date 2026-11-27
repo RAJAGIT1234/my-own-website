@@ -1,9 +1,13 @@
 import React, { useEffect, useState, useRef } from "react";
 import { Link } from "react-router-dom";
 import "../styles/home.css";
+import "../styles/advancedFeatures.css";
 import profileImg from "../assets/Media.jpg";
 import Particles from "react-tsparticles";
 import AISystemSimulator from "../components/AISystemSimulator";
+import MicroservicesTopology from "../components/MicroservicesTopology";
+import ApiSandbox from "../components/ApiSandbox";
+import RecruiterMatchCalculator from "../components/RecruiterMatchCalculator";
 import {
   FaServer,
   FaBolt,
@@ -571,30 +575,47 @@ export default function Home() {
         <AISystemSimulator />
 
         {/* =========================================================
-            SECTION 4: PRIMARY TECH ARSENAL (HOLOGRAPHIC CHIPS)
+            SECTION 4: DISTRIBUTED MICROSERVICES TOPOLOGY MAP
+           ========================================================= */}
+        <MicroservicesTopology />
+
+        {/* =========================================================
+            SECTION 5: LIVE ENTERPRISE REST API SANDBOX
+           ========================================================= */}
+        <ApiSandbox />
+
+        {/* =========================================================
+            SECTION 6: RECRUITER JD SKILL MATCHER & FIT CALCULATOR
+           ========================================================= */}
+        <RecruiterMatchCalculator />
+
+        {/* =========================================================
+            SECTION 7: PRIMARY TECH ARSENAL (HOLOGRAPHIC CHIPS)
            ========================================================= */}
         <section className="section-4k">
           <div className="section-header-4k">
-            <span className="section-kicker">TECHNICAL ARSENAL</span>
+            <span className="section-kicker">TECHNICAL ARSENAL (2026 EDITION)</span>
             <h2>Enterprise Technology Ecosystem</h2>
           </div>
 
           <div className="tech-matrix-wrap">
             {[
-              { name: "Java 17 / 21", category: "core" },
+              { name: "Java 21 Virtual Threads (Loom)", category: "core" },
+              { name: "Java 17 LTS", category: "core" },
               { name: "Spring Boot 3.x", category: "backend" },
-              { name: "Apache Kafka", category: "distributed" },
-              { name: "AWS (EC2, S3, RDS)", category: "cloud" },
-              { name: "Redis Caching", category: "distributed" },
-              { name: "PostgreSQL & MySQL", category: "db" },
-              { name: "Resilience4j", category: "backend" },
+              { name: "Apache Kafka (8k RPS)", category: "distributed" },
+              { name: "Redis Cluster (L2 Cache)", category: "distributed" },
+              { name: "AWS (ECS, RDS, S3)", category: "cloud" },
+              { name: "Saga Pattern (Distributed Tx)", category: "distributed" },
+              { name: "OpenTelemetry & Prometheus", category: "security" },
+              { name: "Resilience4j Circuit Breakers", category: "backend" },
+              { name: "GraalVM Native Image", category: "core" },
               { name: "Docker & Kubernetes", category: "cloud" },
-              { name: "Keycloak (OAuth2/JWT)", category: "security" },
-              { name: "Virtual Threads & Concurrency", category: "core" },
-              { name: "Cursor & Claude 3.5 Sonnet", category: "ai" },
-              { name: "Prometheus & Grafana", category: "security" },
-              { name: "Jenkins CI/CD", category: "cloud" },
-              { name: "JUnit 5 & Mockito (TDD)", category: "testing" }
+              { name: "PostgreSQL & Aurora DB", category: "db" },
+              { name: "Keycloak (OAuth 2.0 / JWT)", category: "security" },
+              { name: "Cursor IDE & Claude 3.5 Sonnet", category: "ai" },
+              { name: "Testcontainers & Mockito", category: "testing" },
+              { name: "SonarQube & OWASP Guards", category: "security" }
             ].map((tech, idx) => (
               <span key={idx} className={`tech-matrix-chip chip-${tech.category}`}>
                 {tech.name}
@@ -604,7 +625,7 @@ export default function Home() {
         </section>
 
         {/* =========================================================
-            SECTION 5: BOTTOM 4K EXECUTIVE CTA BANNER
+            SECTION 8: BOTTOM 4K EXECUTIVE CTA BANNER
            ========================================================= */}
         <section className="executive-cta-4k">
           <div className="cta-4k-backdrop"></div>
@@ -623,7 +644,7 @@ export default function Home() {
                 <span>📬 Get In Touch Directly</span>
               </Link>
               <a
-                href="https://www.linkedin.com/in/durgashankarpatra-java-developer"
+                href="https://www.linkedin.com/in/durgashankar-patra-b2092120b/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-electric-secondary"
