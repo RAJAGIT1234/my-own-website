@@ -12,7 +12,6 @@ import Education from "../pages/Education";
 import Experience from "../pages/Experience";
 import Address from "../pages/Address";
 import BlogManager from "../pages/BlogManager";
-import ProjectManager from "../pages/ProjectManager";
 import ProjectDetail from "../pages/ProjectDetail";
 import PrivateRoute from "../components/PrivateRoute";
 
@@ -26,6 +25,10 @@ export default function AppRoutes() {
       <Route path="/projects" element={<Projects />} />
       <Route path="/projects/:id" element={<ProjectDetail />} />
       <Route path="/resume" element={<Resume />} />
+      <Route path="/experience" element={<Experience />} />
+      <Route path="/profile" element={<Profile />} />
+      <Route path="/education" element={<Education />} />
+      <Route path="/address" element={<Address />} />
 
       {/* Recruiter / Visitor Pass (Replaces old mock login) */}
       <Route path="/visitor-pass" element={<VisitorPass />} />
@@ -73,6 +76,22 @@ export default function AppRoutes() {
         }
       />
       <Route
+        path="/dashboard/projects"
+        element={
+          <PrivateRoute>
+            <Projects />
+          </PrivateRoute>
+        }
+      />
+      <Route
+        path="/dashboard/contact"
+        element={
+          <PrivateRoute>
+            <Contact />
+          </PrivateRoute>
+        }
+      />
+      <Route
         path="/dashboard/blogs"
         element={
           <PrivateRoute>
@@ -80,14 +99,9 @@ export default function AppRoutes() {
           </PrivateRoute>
         }
       />
-      <Route
-        path="/dashboard/projects"
-        element={
-          <PrivateRoute>
-            <ProjectManager />
-          </PrivateRoute>
-        }
-      />
+
+      {/* Fallback route - redirects any unknown URL to Home */}
+      <Route path="*" element={<Navigate to="/" replace />} />
     </Routes>
   );
 }
