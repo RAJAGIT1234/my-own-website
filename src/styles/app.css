@@ -1,47 +1,334 @@
-/* Full height for page */
+/* ==========================================================================
+   GLOBAL APP LAYOUT - 4K CYBERNETIC DARK THEME
+   ========================================================================== */
+
 html, body, #root {
-  height: 100%;
+  min-height: 100%;
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+  background-color: #030712;
+  color: #f8fafc;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-/* Flex layout for entire app */
+/* Base App Container */
 .app-container {
   display: flex;
   flex-direction: column;
-  min-height: 100vh; /* full viewport height */
+  min-height: 100vh;
+  background-color: #030712;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Micro-dot Cyber Grid Matrix Overlay across the whole app */
+.app-container::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.07) 1px, transparent 1px);
+  background-size: 32px 32px;
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0.6;
+}
+
+/* Ambient Radiant Mesh Glows */
+.app-container::after {
+  content: "";
+  position: fixed;
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(79, 70, 229, 0.15) 0%, transparent 70%);
+  top: -150px;
+  left: -100px;
+  filter: blur(140px);
+  pointer-events: none;
+  z-index: 1;
 }
 
 .main-content {
-  flex: 1 0 auto; /* allows content to grow */
-  padding-bottom: 80px; /* space for footer */
-  padding-top: 80px;   /* ⬅️ add this (same as navbar height) */
+  flex: 1 0 auto;
+  padding-top: 84px; /* Space for fixed cyber navbar */
+  position: relative;
+  z-index: 3;
 }
 
-
-
-/* Footer styling */
-.footer {
-  flex-shrink: 0;
-  background: #f1f1f1;
-  text-align: center;
-  padding: 20px 0;
-  color: #333;
-}
-
-/* Navbar styling */
+/* ==========================================================================
+   GLOBAL NAVBAR STYLING (FROSTED CYBERNETIC GLASS)
+   ========================================================================== */
 .navbar {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  height: 80px;          /* adjust as needed */
-  background: #fff;      /* keep navbar visible */
+  height: 76px;
+  background: rgba(3, 7, 18, 0.85);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 20px;
-  z-index: 1000;         /* ensures it stays above content */
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* optional */
+  padding: 0 24px;
+  box-sizing: border-box;
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+.navbar.scrolled {
+  background: rgba(3, 7, 18, 0.96);
+  border-bottom-color: rgba(56, 189, 248, 0.25);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7), 0 0 20px rgba(56, 189, 248, 0.1);
+}
+
+.navbar-container {
+  max-width: 1240px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar-logo .logo-text {
+  font-size: 1.25rem;
+  font-weight: 900;
+  color: #ffffff;
+  text-decoration: none;
+  letter-spacing: -0.5px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.navbar-logo .logo-text::before {
+  content: "";
+  display: inline-block;
+  width: 9px;
+  height: 9px;
+  background: #38bdf8;
+  border-radius: 50%;
+  box-shadow: 0 0 10px #38bdf8;
+  animation: pulseBeacon 2s infinite;
+}
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 24px;
+}
+
+.navbar-links li a {
+  color: #cbd5e1;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: all 0.25s ease;
+  position: relative;
+  padding: 6px 0;
+}
+
+.navbar-links li a:hover {
+  color: #38bdf8;
+  text-shadow: 0 0 12px rgba(56, 189, 248, 0.5);
+}
+
+.navbar-links li a.active {
+  color: #facc15;
+  font-weight: 750;
+}
+
+.navbar-links li a.active::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #38bdf8, #facc15);
+  border-radius: 999px;
+  box-shadow: 0 0 8px #38bdf8;
+}
+
+/* Recruiter Pass button in Navbar */
+.navbar-links .btn-primary {
+  background: linear-gradient(135deg, #facc15, #eab308);
+  color: #020617 !important;
+  font-size: 0.85rem !important;
+  font-weight: 850 !important;
+  padding: 8px 18px !important;
+  border-radius: 999px;
+  box-shadow: 0 0 15px rgba(250, 204, 21, 0.4);
+  transition: all 0.25s ease;
+}
+
+.navbar-links .btn-primary:hover {
+  transform: translateY(-2px) scale(1.04);
+  box-shadow: 0 0 25px rgba(250, 204, 21, 0.7);
+  background: #fef08a;
+}
+
+.navbar-links .btn-primary::after {
+  display: none !important;
+}
+
+/* Visitor Identity Pill */
+.visitor-nav-pill {
+  font-size: 0.78rem;
+  font-weight: 750;
+  color: #38bdf8;
+  background: rgba(56, 189, 248, 0.12);
+  border: 1px solid rgba(56, 189, 248, 0.35);
+  padding: 5px 12px;
+  border-radius: 999px;
+  box-shadow: 0 0 10px rgba(56, 189, 248, 0.2);
+}
+
+.btn-exit-pass {
+  background: rgba(239, 68, 68, 0.15);
+  border: 1px solid rgba(239, 68, 68, 0.35);
+  color: #f87171;
+  font-size: 0.78rem;
+  font-weight: 750;
+  padding: 5px 12px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-exit-pass:hover {
+  background: #ef4444;
+  color: #ffffff;
+  box-shadow: 0 0 15px rgba(239, 68, 68, 0.5);
+}
+
+/* Mobile Hamburger */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.hamburger span {
+  width: 24px;
+  height: 2px;
+  background: #ffffff;
+  transition: all 0.3s ease;
+}
+
+/* ==========================================================================
+   GLOBAL FOOTER STYLING (4K CYBERNETIC FOOTER)
+   ========================================================================== */
+.footer {
+  position: relative;
+  background: rgba(2, 6, 23, 0.95);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 36px 20px 30px;
+  color: #94a3b8;
+  font-size: 0.88rem;
+  z-index: 5;
+  overflow: hidden;
+}
+
+.footer::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 10%; right: 10%;
+  height: 1.5px;
+  background: linear-gradient(90deg, transparent, #38bdf8, #818cf8, #facc15, transparent);
+  box-shadow: 0 0 15px #38bdf8;
+}
+
+.footer-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  text-align: center;
+}
+
+.footer-status-line {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.74rem;
+  font-weight: 750;
+  color: #34d399;
+  background: rgba(16, 185, 129, 0.12);
+  border: 1px solid rgba(52, 211, 153, 0.3);
+  padding: 4px 14px;
+  border-radius: 999px;
+}
+
+.footer-dot-pulse {
+  width: 6px;
+  height: 6px;
+  background: #34d399;
+  border-radius: 50%;
+  box-shadow: 0 0 8px #34d399;
+  animation: pulseBeacon 1.4s infinite;
+}
+
+.footer-links-row {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.footer-link {
+  color: #cbd5e1;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.86rem;
+  transition: color 0.2s;
+}
+
+.footer-link:hover {
+  color: #38bdf8;
+  text-shadow: 0 0 10px rgba(56, 189, 248, 0.5);
+}
+
+.footer-copy {
+  color: #64748b;
+  font-size: 0.78rem;
+  margin: 0;
+}
+
+/* Responsive Navbar */
+@media (max-width: 868px) {
+  .hamburger {
+    display: flex;
+  }
+  .navbar-links {
+    position: fixed;
+    top: 76px;
+    right: -100%;
+    width: 260px;
+    height: calc(100vh - 76px);
+    background: rgba(3, 7, 18, 0.98);
+    backdrop-filter: blur(28px);
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
+    flex-direction: column;
+    padding: 30px 24px;
+    gap: 20px;
+    align-items: flex-start;
+    transition: right 0.3s ease;
+  }
+  .navbar-links.active {
+    right: 0;
+  }
 }

@@ -1,186 +1,257 @@
-/* ========================================================
-   EXPERIENCE PAGE STYLING - MODERN SENIOR JAVA ENGINEER
-   ======================================================== */
+/* ==========================================================================
+   4K CYBERNETIC EXPERIENCE TIMELINE STYLING (SENIOR JAVA ARCHITECT)
+   ========================================================================== */
 
 .experience-container {
-  max-width: 1000px;
+  position: relative;
+  background-color: #030712;
+  color: #f8fafc;
+  min-height: 100vh;
+  padding: 40px 24px 80px;
+  max-width: 1100px;
   margin: 0 auto;
-  padding: 40px 20px 80px;
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  box-sizing: border-box;
+}
+
+.exp-ambient-beam {
+  position: absolute;
+  top: 0; left: 10%; right: 10%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #38bdf8, #818cf8, #facc15, transparent);
+  box-shadow: 0 0 20px #38bdf8;
 }
 
 .exp-intro {
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 44px;
+}
+
+.exp-kicker {
+  display: inline-block;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  color: #38bdf8;
+  text-transform: uppercase;
+  margin-bottom: 10px;
 }
 
 .exp-intro h1 {
-  font-size: 2.6rem;
-  color: #0f172a;
-  font-weight: 800;
-  margin-bottom: 10px;
-  letter-spacing: -0.5px;
+  font-size: 3rem;
+  font-weight: 900;
+  letter-spacing: -0.8px;
+  margin: 0 0 14px;
+  background: linear-gradient(90deg, #ffffff 0%, #cbd5e1 50%, #38bdf8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .experience-tagline {
   font-size: 1.1rem;
-  color: #64748b;
-  max-width: 650px;
+  color: #94a3b8;
+  max-width: 700px;
   margin: 0 auto;
-  line-height: 1.6;
+  line-height: 1.7;
 }
 
+/* Timeline Track */
 .experience-timeline {
   display: flex;
   flex-direction: column;
-  gap: 32px;
+  gap: 36px;
+  position: relative;
 }
 
 .experience-card {
-  background: #ffffff;
-  border-radius: 20px;
-  padding: 34px 30px;
-  border: 1px solid #e2e8f0;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
   position: relative;
+  background: rgba(15, 23, 42, 0.75);
+  backdrop-filter: blur(28px);
+  -webkit-backdrop-filter: blur(28px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 26px;
+  padding: 38px 36px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.65), 0 0 30px rgba(79, 70, 229, 0.12);
   overflow: hidden;
-  transition: all 0.3s ease;
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .experience-card::before {
   content: "";
   position: absolute;
-  top: 0; left: 0;
-  width: 5px;
-  height: 100%;
-  background: linear-gradient(180deg, #4f46e5, #06b6d4);
+  top: 0; left: 0; bottom: 0;
+  width: 4px;
+  background: linear-gradient(180deg, #facc15, #38bdf8, #818cf8);
 }
 
 .experience-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 16px 35px rgba(79, 70, 229, 0.1);
-  border-color: #c7d2fe;
+  border-color: rgba(56, 189, 248, 0.5);
+  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.8), 0 0 40px rgba(56, 189, 248, 0.25);
 }
 
+/* Header */
 .exp-header-top {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 12px;
   flex-wrap: wrap;
   gap: 10px;
+  margin-bottom: 16px;
 }
 
 .exp-role-badge {
-  background: rgba(79, 70, 229, 0.1);
-  color: #4f46e5;
-  font-size: 0.95rem;
-  font-weight: 750;
-  padding: 6px 14px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.78rem;
+  font-weight: 850;
+  color: #38bdf8;
+  background: rgba(56, 189, 248, 0.14);
+  border: 1px solid rgba(56, 189, 248, 0.4);
+  padding: 4px 14px;
   border-radius: 999px;
-  border: 1px solid rgba(79, 70, 229, 0.2);
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
 }
 
 .exp-duration-badge {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.78rem;
+  font-weight: 750;
+  color: #facc15;
+  background: rgba(250, 204, 21, 0.12);
+  border: 1px solid rgba(250, 204, 21, 0.35);
+  padding: 4px 14px;
+  border-radius: 999px;
   display: inline-flex;
   align-items: center;
-  font-size: 0.9rem;
-  color: #475569;
-  font-weight: 600;
-  background: #f1f5f9;
-  padding: 5px 12px;
-  border-radius: 999px;
 }
 
 .exp-company-title {
-  font-size: 1.6rem;
-  color: #0f172a;
-  font-weight: 800;
+  font-size: 1.8rem;
+  font-weight: 850;
+  color: #ffffff;
   margin: 0 0 8px;
   letter-spacing: -0.3px;
 }
 
 .exp-meta-line {
   display: flex;
-  align-items: center;
-  gap: 16px;
-  color: #64748b;
-  font-size: 0.95rem;
-  margin-bottom: 18px;
   flex-wrap: wrap;
+  align-items: center;
+  gap: 14px;
+  font-size: 0.92rem;
+  color: #94a3b8;
+  margin-bottom: 22px;
 }
 
-.exp-meta-line span {
+.exp-location-tag {
+  color: #cbd5e1;
+  font-weight: 600;
   display: inline-flex;
   align-items: center;
-  gap: 6px;
+  gap: 5px;
 }
 
 .exp-tagline-text {
-  color: #4338ca;
+  color: #38bdf8;
   font-weight: 600;
 }
 
-/* Metrics */
+/* Metrics Strip */
 .exp-metrics-strip {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
-  margin-bottom: 18px;
+  margin-bottom: 24px;
 }
 
 .exp-metric-pill {
-  background: #f0fdf4;
-  border: 1px solid #bbf7d0;
-  color: #15803d;
-  font-size: 0.82rem;
-  font-weight: 700;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.8rem;
+  font-weight: 800;
+  color: #34d399;
+  background: rgba(16, 185, 129, 0.12);
+  border: 1px solid rgba(52, 211, 153, 0.35);
   padding: 5px 12px;
-  border-radius: 6px;
+  border-radius: 999px;
 }
 
-/* Tech Chips */
-.exp-tech-chips {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin-bottom: 22px;
-}
-
-.exp-tech-chip {
-  background: #f8fafc;
-  border: 1px solid #cbd5e1;
-  color: #1e293b;
-  font-size: 0.82rem;
-  font-weight: 600;
-  padding: 4px 10px;
-  border-radius: 6px;
-}
-
-.exp-accomplishments-title {
-  font-size: 1rem;
-  color: #1e293b;
-  margin: 0 0 10px;
-  font-weight: 700;
-}
-
+/* Bullet Points */
 .exp-details-list {
-  padding-left: 20px;
-  margin: 0;
+  list-style: none;
+  margin: 0 0 26px;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
 
 .exp-details-list li {
-  font-size: 0.95rem;
-  color: #475569;
-  line-height: 1.65;
-  margin-bottom: 10px;
+  position: relative;
+  padding-left: 24px;
+  font-size: 0.96rem;
+  color: #cbd5e1;
+  line-height: 1.7;
 }
 
+.exp-details-list li::before {
+  content: "⚡";
+  position: absolute;
+  left: 0;
+  top: 1px;
+  font-size: 0.85rem;
+  color: #facc15;
+}
+
+/* Tech Tags */
+.exp-tech-section {
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding-top: 18px;
+}
+
+.exp-tech-title {
+  display: block;
+  font-size: 0.74rem;
+  font-weight: 800;
+  color: #64748b;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.exp-tech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.exp-tech-tag {
+  background: rgba(2, 6, 23, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #e2e8f0;
+  font-size: 0.76rem;
+  font-weight: 700;
+  padding: 4px 11px;
+  border-radius: 999px;
+  transition: all 0.2s;
+}
+
+.exp-tech-tag:hover {
+  border-color: #38bdf8;
+  color: #38bdf8;
+}
+
+/* Responsive */
 @media (max-width: 640px) {
   .experience-card {
-    padding: 24px 20px;
+    padding: 26px 20px;
+    border-radius: 20px;
+  }
+  .exp-intro h1 {
+    font-size: 2.1rem;
   }
   .exp-company-title {
-    font-size: 1.3rem;
+    font-size: 1.45rem;
   }
 }

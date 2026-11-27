@@ -1,6 +1,6 @@
 import React from "react";
 import "../styles/Education.css";
-import { FaGraduationCap, FaUniversity, FaAward, FaCalendarAlt } from "react-icons/fa";
+import { FaGraduationCap, FaUniversity, FaAward, FaCalendarAlt, FaCode } from "react-icons/fa";
 
 export default function Education() {
   const educationList = [
@@ -11,7 +11,7 @@ export default function Education() {
       duration: "2016 – 2020",
       score: "69.13%",
       highlight: true,
-      description: "Focused on Core Computer Science: Distributed Systems, Operating Systems, Data Structures & Algorithms, Database Management Systems, and Object-Oriented Software Engineering."
+      description: "Comprehensive foundational mastery in Computer Science: Distributed Systems, Operating Systems, Data Structures & Algorithms, Database Management Systems, and Object-Oriented Software Engineering."
     },
     {
       degree: "Higher Secondary Certificate (Science, PCM)",
@@ -20,7 +20,7 @@ export default function Education() {
       duration: "2015 – 2016",
       score: "63.33%",
       highlight: false,
-      description: "Physics, Chemistry, and Higher Mathematics foundation."
+      description: "Rigorous analytical training in Physics, Chemistry, and Advanced Higher Mathematics foundation."
     },
     {
       degree: "Secondary School Examination (10th Standard)",
@@ -29,15 +29,18 @@ export default function Education() {
       duration: "2013 – 2014",
       score: "84.17%",
       highlight: false,
-      description: "Graduated with First Division and high academic distinction."
+      description: "Graduated with First Division and high academic distinction across state examinations."
     }
   ];
 
   return (
     <div className="education-container">
       <div className="education-header">
+        <div className="edu-badge-pill">
+          <FaGraduationCap /> Academic Pedigree
+        </div>
         <h1>🎓 Educational Qualifications</h1>
-        <p className="education-tagline">Academic foundation in Computer Science & Engineering</p>
+        <p className="education-tagline">Academic foundation in Computer Science & Distributed Systems Engineering</p>
       </div>
 
       <div className="education-list">
@@ -48,7 +51,7 @@ export default function Education() {
               <div className="edu-icon"><FaGraduationCap /></div>
               <div>
                 <h2>{edu.degree}</h2>
-                <p className="institution"><FaUniversity style={{ marginRight: 6 }} /> {edu.institution}</p>
+                <p className="institution"><FaUniversity style={{ marginRight: 8 }} /> {edu.institution}</p>
                 <p className="college-text">{edu.college}</p>
               </div>
             </div>

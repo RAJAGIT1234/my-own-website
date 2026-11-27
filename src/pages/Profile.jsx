@@ -6,7 +6,9 @@ import {
   FaMapMarkerAlt,
   FaLinkedin,
   FaBriefcase,
-  FaAward
+  FaAward,
+  FaShieldAlt,
+  FaBolt
 } from "react-icons/fa";
 
 export default function Profile() {
@@ -14,10 +16,10 @@ export default function Profile() {
     name: "Durgashankar Patra",
     role: "Senior Java Software Engineer",
     subRole: "Microservices, Distributed Systems & AI-Driven Engineering",
-    email: "durgashankarpatra380@gmail.com",
+    email: "durgashankarpatra457@gmail.com",
     location: "Indore, India (Open to Relocate)",
     nativeLocation: "Balasore, Odisha",
-    linkedin: "https://www.linkedin.com/in/durgashankarpatra-java-developer",
+    linkedin: "https://www.linkedin.com/in/durgashankar-patra-b2092120b/",
     experience: "4.5+ years of enterprise distributed systems experience",
     skills: [
       "Java 17 / 21",
@@ -39,6 +41,9 @@ export default function Profile() {
   return (
     <div className="profile-container">
       <div className="profile-hero-header">
+        <div className="profile-badge-pill">
+          <FaBolt /> Executive Dossier
+        </div>
         <h1>👤 Professional Profile</h1>
         <p className="profile-tagline">Executive overview of background, skills & architectural strengths</p>
       </div>
@@ -51,7 +56,7 @@ export default function Profile() {
             <p className="profile-subrole">{profile.subRole}</p>
           </div>
           <div className="profile-status-badge">
-            <FaMapMarkerAlt style={{ marginRight: 6 }} /> Open to Relocate
+            <FaMapMarkerAlt style={{ marginRight: 6 }} /> Open to Relocate • Immediate Notice
           </div>
         </div>
 
@@ -81,7 +86,7 @@ export default function Profile() {
         </div>
 
         <div className="profile-bio-box">
-          <h3>Professional Summary</h3>
+          <h3><FaShieldAlt style={{ color: "#818cf8" }} /> Professional Summary</h3>
           <p>{profile.bio}</p>
         </div>
 

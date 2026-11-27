@@ -1,99 +1,131 @@
 /* ========================================================
-   PROFILE PAGE STYLING - MODERN SENIOR JAVA ENGINEER
+   4K CYBERNETIC PROFILE & EXECUTIVE DOSSIER STYLING
    ======================================================== */
 
 .profile-container {
-  max-width: 950px;
+  max-width: 1050px;
   margin: 0 auto;
-  padding: 40px 20px 80px;
+  padding: 50px 20px 100px;
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  color: #f1f5f9;
 }
 
 .profile-hero-header {
   text-align: center;
-  margin-bottom: 35px;
+  margin-bottom: 40px;
+}
+
+.profile-badge-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(99, 102, 241, 0.12);
+  color: #818cf8;
+  border: 1px solid rgba(99, 102, 241, 0.3);
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 6px 16px;
+  border-radius: 999px;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  margin-bottom: 14px;
 }
 
 .profile-hero-header h1 {
-  font-size: 2.6rem;
-  color: #0f172a;
-  font-weight: 800;
-  margin-bottom: 8px;
-  letter-spacing: -0.5px;
+  font-size: 2.8rem;
+  font-weight: 900;
+  letter-spacing: -0.8px;
+  margin-bottom: 12px;
+  background: linear-gradient(135deg, #ffffff 0%, #cbd5e1 50%, #818cf8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .profile-tagline {
-  color: #64748b;
-  font-size: 1.05rem;
+  color: #94a3b8;
+  font-size: 1.12rem;
+  max-width: 650px;
+  margin: 0 auto;
 }
 
 .profile-card {
-  background: #ffffff;
-  border-radius: 20px;
-  padding: 36px 32px;
-  border: 1px solid #e2e8f0;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  background: rgba(15, 23, 42, 0.65);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-radius: 24px;
+  padding: 42px 38px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.05);
 }
 
 .profile-card-top {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  border-bottom: 1.5px solid #f1f5f9;
-  padding-bottom: 22px;
-  margin-bottom: 24px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  padding-bottom: 26px;
+  margin-bottom: 28px;
   flex-wrap: wrap;
-  gap: 15px;
+  gap: 18px;
 }
 
 .profile-title-block h2 {
-  font-size: 1.8rem;
-  color: #0f172a;
-  font-weight: 850;
-  margin: 0 0 4px;
+  font-size: 2.1rem;
+  font-weight: 900;
+  margin: 0 0 6px;
+  background: linear-gradient(135deg, #ffffff 0%, #e0e7ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .profile-role {
-  font-size: 1.15rem;
-  color: #4f46e5;
-  font-weight: 700;
-  margin: 0 0 2px;
+  font-size: 1.25rem;
+  color: #818cf8;
+  font-weight: 750;
+  margin: 0 0 4px;
 }
 
 .profile-subrole {
-  font-size: 0.95rem;
-  color: #64748b;
+  font-size: 0.96rem;
+  color: #94a3b8;
   margin: 0;
 }
 
 .profile-status-badge {
   display: inline-flex;
   align-items: center;
-  background: #f0fdf4;
-  border: 1px solid #86efac;
-  color: #166534;
-  padding: 8px 16px;
+  background: rgba(16, 185, 129, 0.12);
+  border: 1px solid rgba(16, 185, 129, 0.35);
+  color: #34d399;
+  padding: 8px 18px;
   border-radius: 999px;
-  font-size: 0.9rem;
+  font-size: 0.88rem;
   font-weight: 700;
+  box-shadow: 0 0 15px rgba(16, 185, 129, 0.15);
 }
 
 /* Info Grid */
 .profile-info-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 16px;
-  margin-bottom: 28px;
+  gap: 18px;
+  margin-bottom: 34px;
 }
 
 .info-cell {
-  background: #f8fafc;
-  padding: 14px 18px;
-  border-radius: 12px;
-  border: 1px solid #f1f5f9;
+  background: rgba(30, 41, 59, 0.45);
+  padding: 18px 20px;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 6px;
+  transition: all 0.2s ease;
+}
+
+.info-cell:hover {
+  background: rgba(99, 102, 241, 0.08);
+  border-color: rgba(99, 102, 241, 0.3);
 }
 
 .info-cell.full-width {
@@ -101,58 +133,66 @@
 }
 
 .info-label {
-  font-size: 0.85rem;
-  font-weight: 650;
-  color: #64748b;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #94a3b8;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
   display: flex;
   align-items: center;
   gap: 6px;
 }
 
 .info-val {
-  font-size: 0.98rem;
+  font-size: 1.05rem;
+  color: #f8fafc;
   font-weight: 600;
-  color: #1e293b;
 }
 
 .info-val a {
-  color: #4f46e5;
+  color: #38bdf8;
   text-decoration: none;
+  word-break: break-all;
+  transition: color 0.2s ease;
 }
 
 .info-val a:hover {
+  color: #a5f3fc;
   text-decoration: underline;
 }
 
 /* Bio Box */
 .profile-bio-box {
-  background: #f8fafc;
-  border-radius: 14px;
-  padding: 22px 24px;
-  border-left: 4px solid #4f46e5;
-  margin-bottom: 28px;
+  background: rgba(30, 41, 59, 0.35);
+  border-radius: 16px;
+  padding: 26px 28px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  margin-bottom: 34px;
 }
 
 .profile-bio-box h3 {
-  font-size: 1.1rem;
-  color: #0f172a;
-  margin: 0 0 10px;
-  font-weight: 750;
+  font-size: 1.15rem;
+  color: #ffffff;
+  font-weight: 800;
+  margin: 0 0 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
 .profile-bio-box p {
-  font-size: 0.96rem;
-  color: #334155;
-  line-height: 1.7;
+  color: #cbd5e1;
+  font-size: 1rem;
+  line-height: 1.75;
   margin: 0;
 }
 
 /* Skills Box */
 .profile-skills-box h3 {
-  font-size: 1.1rem;
-  color: #0f172a;
-  margin: 0 0 14px;
-  font-weight: 750;
+  font-size: 1.15rem;
+  color: #ffffff;
+  font-weight: 800;
+  margin: 0 0 16px;
 }
 
 .profile-skills-tags {
@@ -162,11 +202,20 @@
 }
 
 .profile-skill-badge {
-  background: #eef2ff;
-  color: #4338ca;
-  border: 1px solid #c7d2fe;
-  padding: 7px 16px;
-  border-radius: 999px;
-  font-size: 0.88rem;
-  font-weight: 650;
+  background: rgba(99, 102, 241, 0.12);
+  color: #c7d2fe;
+  border: 1px solid rgba(99, 102, 241, 0.25);
+  padding: 8px 16px;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: all 0.25s ease;
+}
+
+.profile-skill-badge:hover {
+  background: rgba(99, 102, 241, 0.25);
+  border-color: #818cf8;
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
 }

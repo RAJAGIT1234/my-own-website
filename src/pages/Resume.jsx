@@ -70,15 +70,15 @@ export default function Resume() {
             Senior Java Software Engineer | Microservices, Distributed Systems & AI-Driven Engineering
           </p>
           <div className="resume-contact-row">
-            <span><FaEnvelope /> <a href="mailto:durgashankarpatra380@gmail.com">durgashankarpatra380@gmail.com</a></span>
+            <span><FaEnvelope /> <a href="mailto:durgashankarpatra457@gmail.com">durgashankarpatra457@gmail.com</a></span>
             <span>
               <FaLinkedin />{" "}
               <a
-                href="https://www.linkedin.com/in/durgashankarpatra-java-developer"
+                href="https://www.linkedin.com/in/durgashankar-patra-b2092120b/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                linkedin.com/in/durgashankarpatra-java-developer
+                linkedin.com/in/durgashankar-patra-b2092120b
               </a>
             </span>
           </div>

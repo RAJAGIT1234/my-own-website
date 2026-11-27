@@ -1,6 +1,6 @@
 import React from "react";
 import "../styles/Address.css";
-import { FaMapMarkerAlt, FaEnvelope, FaCheckCircle } from "react-icons/fa";
+import { FaMapMarkerAlt, FaEnvelope, FaCheckCircle, FaCompass, FaCity } from "react-icons/fa";
 
 export default function Address() {
   const addressDetails = {
@@ -8,7 +8,7 @@ export default function Address() {
       location: "Indore, Madhya Pradesh, India",
       status: "Working at Advantal Technologies",
       mobility: "Open to Relocate (Pan-India / Hybrid / Remote)",
-      email: "durgashankarpatra380@gmail.com"
+      email: "durgashankarpatra457@gmail.com"
     },
     permanent: {
       address: "Kathasagada, Badas, Balasore, Odisha, 756083",
@@ -22,6 +22,9 @@ export default function Address() {
   return (
     <div className="address-container">
       <div className="address-header">
+        <div className="address-badge-pill">
+          <FaCompass /> Geographic Presence
+        </div>
         <h1>🏠 Location & Address Details</h1>
         <p className="address-tagline">Current work location, relocation availability & permanent residence</p>
       </div>
@@ -36,8 +39,11 @@ export default function Address() {
           <div className="address-body">
             <p><strong><FaMapMarkerAlt /> City & State:</strong> {addressDetails.present.location}</p>
             <p><strong><FaCheckCircle style={{ color: "#10b981" }} /> Status:</strong> {addressDetails.present.status}</p>
-            <p><strong><FaCheckCircle style={{ color: "#4f46e5" }} /> Mobility:</strong> {addressDetails.present.mobility}</p>
-            <p><strong><FaEnvelope /> Email:</strong> {addressDetails.present.email}</p>
+            <p><strong><FaCheckCircle style={{ color: "#818cf8" }} /> Mobility:</strong> {addressDetails.present.mobility}</p>
+            <p>
+              <strong><FaEnvelope /> Email:</strong>{" "}
+              <a href={`mailto:${addressDetails.present.email}`}>{addressDetails.present.email}</a>
+            </p>
           </div>
         </div>
 
@@ -49,7 +55,7 @@ export default function Address() {
           </div>
           <div className="address-body">
             <p><strong><FaMapMarkerAlt /> Address:</strong> {addressDetails.permanent.address}</p>
-            <p><strong>City:</strong> {addressDetails.permanent.city}</p>
+            <p><strong><FaCity /> City:</strong> {addressDetails.permanent.city}</p>
             <p><strong>State:</strong> {addressDetails.permanent.state}</p>
             <p><strong>Country:</strong> {addressDetails.permanent.country}</p>
             <p><strong>PIN Code:</strong> {addressDetails.permanent.pin}</p>

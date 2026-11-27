@@ -1,6 +1,6 @@
 import React from "react";
 import "../styles/Experience.css";
-import { FaBriefcase, FaCalendarAlt, FaMapMarkerAlt, FaCheckCircle, FaRocket } from "react-icons/fa";
+import { FaBriefcase, FaCalendarAlt, FaMapMarkerAlt, FaCheckCircle, FaRocket, FaBolt } from "react-icons/fa";
 
 export default function Experience() {
   const experiences = [
@@ -10,21 +10,21 @@ export default function Experience() {
       duration: "May 2022 – Present",
       location: "Indore, India",
       tagline: "Enterprise Distributed Systems, High-Throughput Microservices & Event-Driven Backends",
-      tech: ["Java 17", "Spring Boot 3.x", "Apache Kafka", "Redis", "AWS", "Resilience4j", "Keycloak", "Docker", "SonarQube", "Cursor/Claude"],
+      tech: ["Java 17 / 21", "Spring Boot 3.x", "Apache Kafka", "Redis L2 Cluster", "AWS ECS / RDS", "Virtual Threads", "Resilience4j", "Keycloak", "Docker", "SonarQube", "Cursor/Claude"],
       metrics: [
         "8,000+ RPS Peak Load",
-        "99.99% Uptime",
-        "420ms ➔ 75ms p99 Latency",
-        "2M+ Daily Kafka Events",
+        "99.99% System Availability",
+        "420ms ➔ 75ms p99 Latency Drop",
+        "2.4M+ Daily Kafka Events",
         "Zero Critical OWASP Vulns"
       ],
       details: [
-        "Architected and built scalable microservices and reusable enterprise connectors from scratch using Java 17 and Spring Boot, supporting peak production loads of 8,000+ RPS across AWS with 99.99% uptime.",
-        "Implemented multi-tier Redis caching and optimized complex SQL query plans/indexing, cutting database load by 45% and dropping p99 API response times from 420ms to 75ms.",
-        "Designed highly resilient Event-Driven Architecture with Apache Kafka handling 2M+ messages daily with idempotent consumers and dead-letter queues (DLQ), ensuring zero data loss.",
-        "Led end-to-end monolithic decomposition into microservices and implemented fault tolerance using Resilience4j Circuit Breakers and rate limiters.",
-        "Hardened API security with Keycloak (OAuth 2.0/JWT), enforced OWASP compliance, and set up SonarQube quality gates to maintain zero critical vulnerabilities.",
-        "Pioneered adoption of AI coding tools (Cursor, Claude, GitHub Copilot) across backend workflows; formulated prompt guidelines for automated JUnit 5/Mockito test generation and strictly validated AI output for security, memory leaks, and concurrency bugs."
+        "Architected and built scalable microservices and reusable enterprise connectors from scratch using Java 17/21 and Spring Boot 3.x, supporting peak production loads of 8,000+ RPS across AWS with 99.99% availability.",
+        "Implemented multi-tier Redis caching and optimized complex SQL query plans/indexing, cutting primary database load by 45% and dropping p99 API response times from 420ms to 75ms.",
+        "Designed highly resilient Event-Driven Architecture with Apache Kafka handling 2.4M+ messages daily with idempotent consumers and dead-letter queues (DLQ), ensuring zero data loss.",
+        "Led end-to-end monolithic decomposition into microservices and implemented fault tolerance using Resilience4j Circuit Breakers, rate limiters, and Virtual Threads concurrency.",
+        "Hardened perimeter security with Keycloak (OAuth 2.0/JWT), enforced strict OWASP compliance, and set up SonarQube quality gates to maintain zero critical vulnerabilities.",
+        "Pioneered adoption of AI-accelerated engineering (Cursor, Claude 3.5 Sonnet, GitHub Copilot) across backend workflows; formulated prompt guidelines for automated JUnit 5/Mockito test generation with 92% coverage."
       ]
     },
     {
@@ -33,7 +33,7 @@ export default function Experience() {
       duration: "November 2021 – May 2022",
       location: "Delhi / Faridabad, India",
       tagline: "High-Traffic Social Media Streaming Platform & Asynchronous Event Processing",
-      tech: ["Java", "Spring Boot", "PostgreSQL", "Apache Kafka", "Docker", "Jenkins", "AWS EC2/S3", "JMeter"],
+      tech: ["Java", "Spring Boot", "PostgreSQL", "Apache Kafka", "Docker", "Jenkins CI/CD", "AWS EC2/S3", "JMeter"],
       metrics: [
         "40% Deployment Cadence Boost",
         "+25% API Throughput",
@@ -50,8 +50,11 @@ export default function Experience() {
 
   return (
     <div className="experience-container">
+      <div className="exp-ambient-beam"></div>
+
       <div className="exp-intro">
-        <h1>💼 Professional Experience</h1>
+        <span className="exp-kicker">ENTERPRISE CAREER MILESTONES</span>
+        <h1>Professional Engineering Journey</h1>
         <p className="experience-tagline">
           4.5+ years of delivering high-scale enterprise distributed systems, custom connectors, and event-driven backends.
         </p>
@@ -69,11 +72,11 @@ export default function Experience() {
 
             <h2 className="exp-company-title">{exp.company}</h2>
             <div className="exp-meta-line">
-              <span><FaMapMarkerAlt /> {exp.location}</span>
-              <span className="exp-tagline-text">{exp.tagline}</span>
+              <span className="exp-location-tag"><FaMapMarkerAlt style={{ color: "#38bdf8" }} /> {exp.location}</span>
+              <span className="exp-tagline-text">• {exp.tagline}</span>
             </div>
 
-            {/* Impact Metrics */}
+            {/* Impact Metrics Strip */}
             <div className="exp-metrics-strip">
               {exp.metrics.map((m, i) => (
                 <span key={i} className="exp-metric-pill">
@@ -82,22 +85,24 @@ export default function Experience() {
               ))}
             </div>
 
-            {/* Tech chips */}
-            <div className="exp-tech-chips">
-              {exp.tech.map((t, i) => (
-                <span key={i} className="exp-tech-chip">
-                  {t}
-                </span>
-              ))}
-            </div>
-
             {/* Accomplishments */}
-            <h4 className="exp-accomplishments-title">Key Engineering Contributions:</h4>
             <ul className="exp-details-list">
               {exp.details.map((detail, i) => (
                 <li key={i}>{detail}</li>
               ))}
             </ul>
+
+            {/* Tech Tags */}
+            <div className="exp-tech-section">
+              <span className="exp-tech-title">TECHNOLOGIES & TOOLS:</span>
+              <div className="exp-tech-tags">
+                {exp.tech.map((t, i) => (
+                  <span key={i} className="exp-tech-tag">
+                    {t}
+                  </span>
+                ))}
+              </div>
+            </div>
           </div>
         ))}
       </div>
