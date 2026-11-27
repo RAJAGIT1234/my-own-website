@@ -399,6 +399,31 @@
   box-shadow: 0 0 20px rgba(56, 189, 248, 0.35);
 }
 
+/* AI Copilot Action Button */
+.btn-electric-ai {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: linear-gradient(135deg, rgba(56, 189, 248, 0.18), rgba(79, 70, 229, 0.28));
+  border: 1.5px solid #38bdf8;
+  color: #38bdf8;
+  font-size: 0.94rem;
+  font-weight: 800;
+  padding: 12px 22px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 20px rgba(56, 189, 248, 0.25);
+}
+
+.btn-electric-ai:hover {
+  background: linear-gradient(135deg, #38bdf8, #818cf8);
+  color: #020617;
+  box-shadow: 0 0 30px rgba(56, 189, 248, 0.7);
+  transform: translateY(-2px) scale(1.03);
+}
+
 /* Voice Intro Hologram Button */
 .btn-voice-hologram {
   display: inline-flex;

@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import "../styles/home.css";
 import profileImg from "../assets/Media.jpg";
 import Particles from "react-tsparticles";
+import AISystemSimulator from "../components/AISystemSimulator";
 import {
   FaServer,
   FaBolt,
@@ -315,6 +316,16 @@ export default function Home() {
 
                 <button
                   type="button"
+                  className="btn-electric-ai"
+                  onClick={() => window.dispatchEvent(new CustomEvent("open-ai-copilot"))}
+                  title="Open Interactive AI Architecture Assistant"
+                >
+                  <FaBrain style={{ marginRight: 8, color: "#38bdf8" }} />
+                  <span>Ask AI Copilot</span>
+                </button>
+
+                <button
+                  type="button"
                   className={`btn-voice-hologram ${speaking ? "speaking" : ""}`}
                   onClick={handleSpeak}
                   disabled={speaking}
@@ -553,6 +564,11 @@ export default function Home() {
             ))}
           </div>
         </section>
+
+        {/* =========================================================
+            SECTION 3.5: AI SYSTEM DESIGN & ARCHITECTURE SIMULATOR
+           ========================================================= */}
+        <AISystemSimulator />
 
         {/* =========================================================
             SECTION 4: PRIMARY TECH ARSENAL (HOLOGRAPHIC CHIPS)
